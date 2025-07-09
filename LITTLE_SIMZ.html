@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LITTLE SIMZ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Section 1 : 아티스트 이미지 -->
+  <section class="section" id="section1">
+    <div class="background" style="background-image: url('assets/LITTLE_SIMZ/2.png');"></div>
+    <div class="overlay"></div>
+    <a href="index.html" class="back">← Back</a>
+    <div class="content">
+      <div class="left-title">
+        <h1>Pentaport<br>Music<br>Festival</h1>
+      </div>
+      <div class="right-info fixed-info">
+        <h2>LITTLE SIMZ</h2>
+        <p>2025.08.03<br>Songdo Moonlight Festival Park</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Section 2 : 텍스트 -->
+  <section class="section" id="section2">
+    <div class="background" style="background-image: url('2.jpg');"></div>
+    <div class="overlay"></div>
+    <div class="content column fade-in">
+      <div class="text-box">
+        <p>
+          경계를 허물며 영국에서 가장 비전 있는 아티스트로 우뚝 선 리틀 심즈
+
+          한해에 영국과 아일랜드에서 나온 단 한 장의 최고 앨범에 수여되는 머큐리상 수상자, 브릿 어워드, MOBO(Music Of Black Origin), 아이버 노벨로 상 등 화려한 수상 이력, 다양한 장르를 자연스럽게 끌어들인 자신만의 스타일로 비평가들의 찬사를 받은 예술가
+          
+          그는 직접 제작한 세 장의 앨범으로 2010년대 후반, 영국 언더그라운드 랩 신에서 두각을 나타내며, 영국을 대표하는 래퍼로 자리 잡았습니다. 2024년 글래스톤베리 피라미드 스테이지에서의 공연은 그의 독보적인 라이브 퍼포먼스를 전 세계에 다시 한번 각인시키는 순간이었는데요.
+          
+          그는 자신의 음악을 랩이자 익스페리멘탈이라고 설명합니다. 그라임을 기반으로 레게, 블루스, 소울, 트립합, 재즈, R&B 등 여러 장르로부터 영감을 받고 있죠.
+          
+          실제로 EP [Drop 7]에서는 일렉트로닉 사운드로 좀 더 기운 모습을 보여주며, 음악 스타일이 계속 진화 중임을 엿볼 수 있게 했는데요. 올해 6월엔 재즈와 록의 영향을 받은 정규 6집 [Lotus]를 발매했습니다.
+          
+          진솔한 내면의 이야기를 통해 음악적으로 새로운 지평을 열어가고 있는
+          리틀 심즈의 목소리를 인천 펜타포트 락 페스티벌에서 들어보세요!
+        </p>
+        <p class="footer">@littlesimz</p>
+      </div>
+   
+    <div class="album">
+      <img src="assets/LITTLE_SIMZ/l1.jpg">
+      <img src="assets/LITTLE_SIMZ/l2.jpg">
+      <img src="assets/LITTLE_SIMZ/l3.jpg">
+      <img src="assets/LITTLE_SIMZ/l4.jpg">
+      <img src="assets/LITTLE_SIMZ/l5.jpg">
+      </div>
+
+      <br><br><br>
+      <div class="left-info bottom">
+        <h1>Pentaport<br>Music<br>Festival</h1>
+      </div>
+    </div>
+  </section>
+
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.1 // 보이는 비율 10% 이상이면 show 추가
+  });
+
+  document.querySelectorAll('.text-box').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+
+</body>
+
+</html>

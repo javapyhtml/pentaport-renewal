@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HYUKOH & SUNSET ROLLERCOASTER</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Section 1 : 아티스트 이미지 -->
+  <section class="section" id="section1">
+    <div class="background" style="background-image: url('assets/HYUKOH_SUNSET_ROLLERCOASTER/8.png');"></div>
+    <div class="overlay"></div>
+    <a href="index.html" class="back">← Back</a>
+    <div class="content">
+      <div class="left-title">
+        <h1>Pentaport<br>Music<br>Festival</h1>
+      </div>
+      <div class="right-info fixed-info">
+        <h2>HYUKOH <br> & SUNSET ROLLERCOASTER</h2>
+        <p>2025.08.01<br>Songdo Moonlight Festival Park</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Section 2 : 텍스트 -->
+  <section class="section" id="section2">
+    <div class="background" style="background-image: url('2.jpg');"></div>
+    <div class="overlay"></div>
+    <div class="content column fade-in">
+      <div class="text-box">
+        <p>
+          한국과 대만의 젊음을 대표하는 두 밴드, 혁오와 선셋 롤러코스터의 합작 앨범 [AAA]
+
+          2024년 7월, 혁오(오혁, 임현제, 임동건, 이인우, 객원 멤버 정크야드 JNKYRD)와 타이베이 밴드 선셋 롤러코스터(Kuo-Hung Tseng, Hung-Li Chen, Shao-Hsuan Wang, Tsun-Lung Lo, Hao-Ting Huang)가 프로젝트 앨범 [AAA]를 발매했습니다.
+          
+          이 앨범에는 두 밴드가 약 1년 동안 가평, 서울, 제주 등지에서 함께 지내며 공동 창작한 8곡이 담겨 있습니다.
+          
+          그들은 지난 1년간 아시아 12개국에서 17회의 공연을 함께하며 서로에게 대체 불가능한 존재가 되었고, 이 긴 여정의 마지막을 인천펜타포트 락 페스티벌에서 화려하게 장식할 예정입니다.
+          
+
+        </p>
+        <p class="footer">@hyukohofficial</p>
+        <p class="footer">@sunsetrollercoaster</p>
+      </div>
+   
+    <div class="album">
+      <img src="assets/HYUKOH_SUNSET_ROLLERCOASTER/hs1.jpg">
+      <img src="assets/HYUKOH_SUNSET_ROLLERCOASTER/hs2.jpg">
+      </div>
+
+      <br><br><br>
+      <div class="left-info bottom">
+        <h1>Pentaport<br>Music<br>Festival</h1>
+      </div>
+    </div>
+  </section>
+
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.1 // 보이는 비율 10% 이상이면 show 추가
+  });
+
+  document.querySelectorAll('.text-box').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+
+</body>
+
+</html>

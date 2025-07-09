@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>METHOD</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Section 1 : 아티스트 이미지 -->
+  <section class="section" id="section1">
+    <div class="background" style="background-image: url('assets/METHOD/6.png');"></div>
+    <div class="overlay"></div>
+    <a href="index.html" class="back">← Back</a>
+    <div class="content">
+      <div class="left-title">
+        <h1>Pentaport<br>Music<br>Festival</h1>
+      </div>
+      <div class="right-info fixed-info">
+        <h2>METHOD</h2>
+        <p>2025.08.01<br>Songdo Moonlight Festival Park</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Section 2 : 텍스트 -->
+  <section class="section" id="section2">
+    <div class="background" style="background-image: url('2.jpg');"></div>
+    <div class="overlay"></div>
+    <div class="content column fade-in">
+      <div class="text-box">
+        <p>
+          무대 위에서 증명해온 20년 내공, 한국 익스트림 메탈의 근간을 이루는 이름, 메써드
+
+2002년 결성된 메써드(METHOD)는 스래쉬 메탈의 질주감과 멜로딕 데스 메탈의 서사를 결합한, 한국 익스트림 메탈의 선구자입니다. 단순히 ‘무거운 사운드’를 넘어서, 이들은 정교한 리프, 공격적인 그루브, 그리고 서정적이면서도 비장한 멜로디를 통해 메탈의 본질과 예술성을 동시에 구축해왔습니다.
+
+2006년 발표한 데뷔 앨범 이후, 한 해도 쉬지 않고 음반과 공연을 병행하며 씬을 지켜온 이들은 한국대중음악상 ‘최우수 메탈&하드코어 음반상’ 2회 수상, 총 6회 노미네이트라는 기록으로 음악성과 지속성을 모두 입증했습니다. 이는 단지 기록이 아니라, 장르의 한계를 극복해온 ‘한국적 메탈 사운드’의 표본이자 정통성을 대표하는 이정표이기도 합니다.
+
+무대 위에서의 메써드는 그 어떤 밴드보다 타이트하고 격렬하며, 감정적으로 깊은 몰입을 유도하는 존재입니다.
+
+수직 낙하하듯 쏟아지는 리듬과, 혼란 속에서도 치밀하게 설계된 구성, 그리고 인간의 내면을 파고드는 절박한 서사는 국내를 넘어 동남아시아 투어 등 국제 무대에서도 강한 인상을 남기며 점차 영역을 확장하고 있습니다.
+
+2025년 인천 펜타포트 락 페스티벌에서
+메써드의 내공 탄탄한 헤비메탈 무대 놓치지 마세요!
+
+        </p>
+        <p class="footer">@methodmetal_official</p>
+      </div>
+   
+    <div class="album">
+      <img src="assets/METHOD/m1.jpg">
+      <img src="assets/METHOD/m2.jpg">
+      <img src="assets/METHOD/m3.jpg">
+      <img src="assets/METHOD/m4.jpg">
+      <img src="assets/METHOD/m5.jpg">
+
+      </div>
+
+      <br><br><br>
+      <div class="left-info bottom">
+        <h1>Pentaport<br>Music<br>Festival</h1>
+      </div>
+    </div>
+  </section>
+
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.1 // 보이는 비율 10% 이상이면 show 추가
+  });
+
+  document.querySelectorAll('.text-box').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+
+</body>
+
+</html>

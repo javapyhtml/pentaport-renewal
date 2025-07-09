@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulp</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Section 1 : 아티스트 이미지 -->
+  <section class="section" id="section1">
+    <div class="background" style="background-image: url('assets/Pulp/7.png');"></div>
+    <div class="overlay"></div>
+    <a href="index.html" class="back">← Back</a>
+    <div class="content">
+      <div class="left-title">
+        <h1>Pentaport<br>Music<br>Festival</h1>
+      </div>
+      <div class="right-info fixed-info">
+        <h2>Pulp</h2>
+        <p>2025.08.02<br>Songdo Moonlight Festival Park</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Section 2 : 텍스트 -->
+  <section class="section" id="section2">
+    <div class="background" style="background-image: url('2.jpg');"></div>
+    <div class="overlay"></div>
+    <div class="content column fade-in">
+      <div class="text-box">
+        <p>
+          브릿팝의 왕, Pulp의 24년 만의 컴백 — 그리고 첫 한국 공연!
+
+1978년 영국 셰필드에서 결성된 브릿팝 전설 Pulp는 자비스 코커(Jarvis Cocker)를 중심으로 1990년대 중반 “Common People”과 “Disco 2000”이 수록된 명반 [Different Class]로 전 세계에 큰 반향을 일으켰습니다. 2001년 이후 24년 만에 올해 6월 6일 정규 8집 [More]를 발표하며, 세월의 성숙함과 날카로운 사회 관찰을 유지한 새 물결을 선보였습니다.
+
+이 앨범은 절제된 사운드 속에 짙은 감정을 담은 가사와 Pulp 특유의 브릿팝 미학을 그대로 유지하며, 발표와 동시에 전 세계 투어로 이어지고 있습니다.
+
+특히 올해, 결성 47년 만에 첫 내한 공연을 확정하며 인천펜타포트 락 페스티벌의 헤드라이너로 무대에 오릅니다. 신곡과 히트곡을 모두 아우르는 90여분간의 압도적 무대로 브릿팝의 진수를 선사할 예정입니다.
+
+브릿팝 황제의 귀환, 2025 인천펜타포트 락 페스티벌에서 직접 목격하세요!
+
+
+        </p>
+        <p class="footer">@welovepulp</p>
+      </div>
+   
+    <div class="album">
+      <img src="assets/Pulp/p1.jpg">
+      <img src="assets/Pulp/p2.jpg">
+      <img src="assets/Pulp/p3.jpg">
+      <img src="assets/Pulp/p4.jpg">
+      <img src="assets/Pulp/p5.jpg">
+      </div>
+
+      <br><br><br>
+      <div class="left-info bottom">
+        <h1>Pentaport<br>Music<br>Festival</h1>
+      </div>
+    </div>
+  </section>
+
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.1 // 보이는 비율 10% 이상이면 show 추가
+  });
+
+  document.querySelectorAll('.text-box').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+
+</body>
+
+</html>

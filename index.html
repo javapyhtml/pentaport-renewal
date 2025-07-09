@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pentaport</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: #760c0c;
+    }
+
+    #bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 110vw;
+      height: 110vh;
+      overflow: hidden;
+      z-index: -1;
+      will-change: transform;
+    }
+
+    #bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    #content {
+      position: relative;
+      height: 100vh;
+      padding: 50px 60px;
+      box-sizing: border-box;
+    }
+
+    .title {
+      position: absolute;
+      top: 50px;
+      left: 60px;
+      line-height: 1;
+      font-weight: bold;
+    }
+
+    .title h1 {
+      font-size: 5em;
+      margin: 0;
+    }
+
+    .venues, .venues2 {
+      position: absolute;
+      bottom: 180px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+      font-size: 1em;
+    }
+
+    .venues { left: 60px; }
+    .venues2 { left: 340px; }
+
+    .venues div:hover,
+    .venues2 div:hover {
+      font-weight: bold;
+      transform: scale(1.1);
+      transition: transform 0.2s ease, font-weight 0.2s ease;
+      cursor: pointer;
+    }
+
+    .venues a,
+    .venues2 a {
+      color: #760c0c;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.2s ease, font-weight 0.2s ease;
+    }
+
+    .venues a:hover,
+    .venues2 a:hover {
+      font-weight: bold;
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    .paris {
+      position: absolute;
+      bottom: 30px;
+      left: 60px;
+      font-size: 5em;
+      font-weight: bold;
+    }
+
+    .artists {
+      position: absolute;
+      bottom: 30px;
+      left: 680px;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      column-gap: 80px;
+      row-gap: 8px;
+      font-size: 1em;
+    }
+
+    .info {
+      position: absolute;
+      top: 50px;
+      right: 120px;
+      text-align: right;
+      font-size: 0.9em;
+      font-weight: bold;
+      line-height: 1.5;
+    }
+
+    .programme-btn {
+      display: inline-block;
+      padding: 6px 10px;
+      border: 2px solid #760c0c;
+      border-radius: 4px;
+      margin-top: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #760c0c;
+    }
+
+    .menu-button {
+      position: absolute;
+      top: 50px;
+      right: 40px;
+      width: 40px;
+      height: 40px;
+      background-color: #760c0c;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu-button div {
+      width: 20px;
+      height: 2px;
+      background-color: black;
+      margin: 3px 0;
+    }
+
+    .dates {
+      position: absolute;
+      top: 200px;
+      right: 50px;
+      text-align: right;
+      font-size: 2.5em;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .dates div.active {
+      color: black;
+      font-weight: bold;
+      font-size: 1.5em;
+      transition: all 0.2s ease;
+    }
+
+    .nov {
+      font-size: 1em;
+      margin-top: 5px;
+    }
+
+    .coordinates {
+      position: absolute;
+      bottom: 10px;
+      right: 30px;
+      font-size: 0.85em;
+      color: #760c0c;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="bg"><img src="2.jpg" alt="Background" /></div>
+
+  <div id="content">
+    <div class="title">
+      <h1>Pentaport</h1>
+      <h1>Music</h1>
+      <h1>Festival</h1>
+    </div>
+
+    <div class="venues">
+      <div><a href="ASIAN_KUNG_FU_GENERATION.html" data-day="01">ASIAN KUNG-FU GENERATION</a></div>
+      <div><a href="LITTLE_SIMZ.html" data-day="01">LITTLE SIMZ</a></div>
+      <div><a href="CHANG_KIHA.html" data-day="01">CHANG KIHA</a></div>
+      <div><a href="CRYING_NUT.html" data-day="01">CRYING NUT</a></div>
+      <div><a href="BEABADOOBEE.html" data-day="02">BEABADOOBEE</a></div>
+      <div><a href="METHOD.html" data-day="02">METHOD</a></div>
+    </div>
+
+    <div class="venues2">
+      <div><a href="Pulp.html" data-day="02">Pulp</a></div>
+      <div><a href="HYUKOH_SUNSET_ROLLERCOASTER.html" data-day="02">HYUKOH & SUNSET ROLLERCOASTER</a></div>
+      <div><a href="BECK.html" data-day="03">BECK</a></div>
+      <div><a href="JAURIM.html" data-day="03">JAURIM</a></div>
+      <div><a href="DEAFHEAVEN.html" data-day="03">DEAFHEAVEN</a></div>
+      <div><a href="3rd_Line_Butterfly.html" data-day="03">3rd Line Butterfly</a></div>
+    </div>
+
+    <div class="paris">Incheon</div>
+
+<!-- Artists -->
+<div class="artists">
+  <div>ADOY</div>
+  <div>AUDREY NUNA</div>
+  <div>BABO</div>
+  <div>Balming Tiger (Band Set)</div>
+  <div>bongjeingan</div>
+  <div>Brandy Senki</div>
+  <div>Bye Bye Badman</div>
+  <div>CATCH THE YOUNG</div>
+  <div>Danpyunsun & The Moments Ensemble</div>
+  <div>DAYANGSUNG</div>
+  <div>Decadent</div>
+  <div>Dragon Pony</div>
+  <div>Far East Asian Tigers</div>
+  <div>GALAXY EXPRESS</div>
+  <div>HANRORO</div>
+  <div>kanekoayano</div>
+  <div>KARDI</div>
+  <div>KIM MIN KYU (Delispice, Sweatpea)</div>
+  <div>LOWDOWN 30</div>
+  <div>LUCY</div>
+  <div>MEANINGFUL STONE</div>
+  <div>Milledenials</div>
+  <div>Modern Cinema Master</div>
+  <div>MRCH</div>
+  <div>NERD CONNECTION</div>
+  <div>Omar and the Eastern Power</div>
+  <div>Omoinotake</div>
+  <div>QWER</div>
+  <div>REDOOR</div>
+  <div>Rolling Quartz</div>
+  <div>Seoul Electric Band</div>
+  <div>Song Sohee</div>
+  <div>Soumbalgwang</div>
+  <div>Tempalay</div>
+  <div>THE BOWLS</div>
+  <div>TheyNeverChange</div>
+  <div>TOUCHED</div>
+  <div>Touché Amoré</div>
+</div>
+
+    <div class="info">
+      51 X ARTISTS<br />
+      12 X HEADLINER<br />
+      10 X SUPER ROOKIES<br />
+      <a href="#" class="programme-btn">Programme & tickets</a>
+    </div>
+
+    <div class="menu-button"><div></div><div></div><div></div></div>
+
+    <div class="dates">
+      <div id="date-01">01</div>
+      <div id="date-02">02</div>
+      <div id="date-03">03</div>
+      <div class="nov">Aug</div>
+    </div>
+  </div>
+
+  <div class="coordinates">37.4563° N, 126.7052° E</div>
+
+  <script>
+    const bg = document.getElementById('bg');
+    let currentX = 0, currentY = 0, targetX = 0, targetY = 0;
+    let mouseXRatio = 0.5, mouseYRatio = 0.5;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseXRatio = e.clientX / window.innerWidth;
+      mouseYRatio = e.clientY / window.innerHeight;
+      targetX = (mouseXRatio - 0.5) * 40;
+      targetY = (mouseYRatio - 0.5) * 40;
+    });
+
+    function animate() {
+      currentX += (targetX - currentX) * 0.1;
+      currentY += (targetY - currentY) * 0.1;
+      bg.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) scale(1.1)`;
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    const links = document.querySelectorAll('.venues a, .venues2 a');
+    links.forEach(link => {
+      const day = link.getAttribute('data-day');
+      const dateElem = document.getElementById('date-' + day);
+      link.addEventListener('mouseenter', () => {
+        if (dateElem) dateElem.classList.add('active');
+      });
+      link.addEventListener('mouseleave', () => {
+        if (dateElem) dateElem.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+
+</html>

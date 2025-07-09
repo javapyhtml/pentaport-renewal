@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BECK</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Section 1 : 아티스트 이미지 -->
+  <section class="section" id="section1">
+    <div class="background" style="background-image: url('assets/BECK/9.png');"></div>
+    <div class="overlay"></div>
+    <a href="index.html" class="back">← Back</a>
+    <div class="content">
+      <div class="left-title">
+        <h1>Pentaport<br>Music<br>Festival</h1>
+      </div>
+      <div class="right-info fixed-info">
+        <h2>BECK</h2>
+        <p>2025.08.03<br>Songdo Moonlight Festival Park</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Section 2 : 텍스트 -->
+  <section class="section" id="section2">
+    <div class="background" style="background-image: url('2.jpg');"></div>
+    <div class="overlay"></div>
+    <div class="content column fade-in">
+      <div class="text-box">
+        <p>
+          샘솟는 창작력과 도전 정신, 틀을 깬 음악으로 세상을 깨운 천재 뮤지션
+
+그래미 어워즈 8회 수상자
+메인스트림과 언더그라운드를 오가는 독보적인 지점의 음악가
+블루스, 포크, 얼터너티브 록에서 힙합까지 수많은 장르를 시도한 탐험가
+
+90년대 초 음악계에 등장해 지금까지 수많은 음악적 실험을 해온 벡의 디스코그라피를 정의하기 위해선 다양한 수식어가 필요합니다. 지난 30여 년의 시간 동안 그는 음악의 경계를 허물고 과거를 탐색하면서도 미래로 향하는 독보적인 경력을 쌓아왔는데요.
+
+93년에 나온 1집 [Golden Feelings]부터 19년도에 발표한 [Hyperspace]까지14장의 앨범 중 같은 색채를 가진 앨범이 없을 만큼 끊임없이 음악적 지평을 넓혀왔습니다.
+
+펜타포트에서의 공연까지 어떤 앨범을 예습해야 할지 모르겠다면, 대히트를 기록한 1994년 작 [Mellow Gold]의 "Loser"로 시작해 1996년 멀티 플래티넘 앨범 [Odelay] 속 "Devil's Haircut", "The New Pollution", 그래미상 수상 곡인 "Where It's At"Beck을 거쳐 다수 매체로부터 전례 없는 찬사는 물론이고 57회 그래미 어워드에서 3개 부문을 수상한 12번째 정규 앨범 [Morning Phase](2014)를 들어보는 건 어떨까요.
+
+그의 최근 작품 중 좋은 평가를 받은
+퍼렐 윌리엄스와 함께 작업한 [Hyperspace](2019)도 잊지 마세요!
+
+최근에 벡은 오케스트라 투어로, 팬들로부터 몇 년간 최고의 공연이라는 평가를 받고 있는데요.
+
+과연 2025 인천 펜타포트 락 페스티벌에서 어떤 무대가 펼쳐질지 기대해 주세요!
+
+        </p>
+        <p class="footer">@beck</p>
+      </div>
+   
+    <div class="album">
+      <img src="assets/BECK/bc1.jpg">
+      <img src="assets/BECK/bc2.jpg">
+      <img src="assets/BECK/bc3.jpg">
+      <img src="assets/BECK/bc4.jpg">
+      <img src="assets/BECK/bc5.jpg">
+      </div>
+
+      <br><br><br>
+      <div class="left-info bottom">
+        <h1>Pentaport<br>Music<br>Festival</h1>
+      </div>
+    </div>
+  </section>
+
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.1 // 보이는 비율 10% 이상이면 show 추가
+  });
+
+  document.querySelectorAll('.text-box').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+
+</body>
+
+</html>

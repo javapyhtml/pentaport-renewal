@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEAFHEAVEN</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Section 1 : 아티스트 이미지 -->
+  <section class="section" id="section1">
+    <div class="background" style="background-image: url('assets/DEAFHEAVEN/11.png');"></div>
+    <div class="overlay"></div>
+    <a href="index.html" class="back">← Back</a>
+    <div class="content">
+      <div class="left-title">
+        <h1>Pentaport<br>Music<br>Festival</h1>
+      </div>
+      <div class="right-info fixed-info">
+        <h2>DEAFHEAVEN</h2>
+        <p>2025.08.01<br>Songdo Moonlight Festival Park</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Section 2 : 텍스트 -->
+  <section class="section" id="section2">
+    <div class="background" style="background-image: url('2.jpg');"></div>
+    <div class="overlay"></div>
+    <div class="content column fade-in">
+      <div class="text-box">
+        <p>
+          실험하고 확장하고 변화해도 잃지 않는 ‘거친 펑크 정신’
+
+          데프헤븐은 2010년 어린 시절 친구였던 보컬 조지 클라크와 기타리스트 케리 맥코이가 결성했습니다. 2012년에 드러머 대니얼 트레이시, 2013년에 기타와 키보드에 시브 메라, 2017년에 베이시스트 크리스 존슨이 합류했고, 함께 메탈을 어떻게 정의할 것인가를 끊임없이 실험하면서도, 그 가운데 솔직하고 인간적인 감정의 균열을 드러내는 자신들만의 색채를 형성해왔습니다.
+          
+          이 밴드의 가장 매력적인 점은, 실험하고 확장하고 변화해 나가면서도 여전히 15년 전의 ‘거친 펑크 정신’을 간직하고 있다는 건데요.
+          
+          새 앨범을 발표할 때마다 이전에 벌인 시도들에 새로운 요소를 더해 차곡차곡 디스코그라피를 완성해왔습니다.
+          
+          그리고 이들의 음악에 무게를 더하는 건 감추고 싶은 이야기도 진실되게 담는 자전적인 가사인데요.
+          
+          주로 도피하고자 하는 마음을 주제로 삼아 자신을 억누르는 모든 것들로부터 도피하려 하지만, 결국엔 자신으로부터 도망칠 수 없다는 진실을 노래해왔습니다.
+          
+          이런 특징은 4년 만의 앨범이자 새로운 레이블 ‘Roadrunner Records’에서 발표된 6집 [Lonely People With Power]에서 두드러집니다. 특히 멤버들은 6집을 제작하며 데프헤븐이라는 그룹으로서 구축해온 정체성이 더욱 단단해지는 과정을 거치게 됐다고 하는데요.
+          
+          2025 인천 펜타포트 락 페스티벌에서
+          진정한 하나가 된 데프헤븐의 무대를 기대해보세요!
+
+        </p>
+        <p class="footer">@deafheavenband</p>
+      </div>
+   
+    <div class="album">
+      <img src="assets/DEAFHEAVEN/h1.jpg">
+      <img src="assets/DEAFHEAVEN/h2.jpg">
+      <img src="assets/DEAFHEAVEN/h3.jpg">
+      <img src="assets/DEAFHEAVEN/h4.jpg">
+      <img src="assets/DEAFHEAVEN/h5.jpg">
+      </div>
+
+      <br><br><br>
+      <div class="left-info bottom">
+        <h1>Pentaport<br>Music<br>Festival</h1>
+      </div>
+    </div>
+  </section>
+
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.1 // 보이는 비율 10% 이상이면 show 추가
+  });
+
+  document.querySelectorAll('.text-box').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+
+</body>
+
+</html>

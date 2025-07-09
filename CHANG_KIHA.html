@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHANG KIHA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Section 1 : 아티스트 이미지 -->
+  <section class="section" id="section1">
+    <div class="background" style="background-image: url('assets/CHANG_KIHA/3.png');"></div>
+    <div class="overlay"></div>
+    <a href="index.html" class="back">← Back</a>
+    <div class="content">
+      <div class="left-title">
+        <h1>Pentaport<br>Music<br>Festival</h1>
+      </div>
+      <div class="right-info fixed-info">
+        <h2>CHANG KIHA</h2>
+        <p>2025.08.01<br>Songdo Moonlight Festival Park</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Section 2 : 텍스트 -->
+  <section class="section" id="section2">
+    <div class="background" style="background-image: url('2.jpg');"></div>
+    <div class="overlay"></div>
+    <div class="content column fade-in">
+      <div class="text-box">
+        <p>
+          동시대 음악적 감수성에 국어의 말맛을 더한 독창적 장르의 형성 무경계 아티스트, 장기하
+
+밴드 “눈뜨고 코베인”의 드러머로 음악 활동을 시작 2008년 당시 청년 세대의 상황을 대변한 솔로 싱글 [싸구려 커피]를 선보이고, 이후 “장기하와 얼굴들”을 결성해 10년간 인디밴드의 개념을 새롭게 정의.
+
+[별일 없이 산다], [장기하와 얼굴들] 앨범으로 한국대중음악상 7개 부문을 수상한 그는 2018년 12월, ‘장기하와 얼굴들’의 밴드 활동을 마무리한 뒤 라디오 DJ, 연기 등 전방위 아티스트로 활동하며, 산문집 『상관없는 거 아닌가?』를 출간해 작가로서도 성공적인 데뷔를 마쳤습니다.
+
+그리고 2022년, 첫 솔로 EP [공중부양]을 발표하며 솔로 뮤지션으로 컴백, 2023년에는 싱글 [해 / 할건지말건지]를 발매하며 밴드 사운드로 귀환!
+그야말로 전방위적인 창작 활동을 펼쳐온 그는 공연 역시 다양한 형식과 편곡으로 선보여왔는데요.
+
+장기하가 2025 인천 펜타포트 락 페스티벌에서
+어떤 무대를 보여줄지 기대해주세요!
+
+
+        </p>
+        <p class="footer">@kihachang</p>
+      </div>
+   
+    <div class="album">
+      <img src="assets/CHANG_KIHA/ch1.jpg">
+      <img src="assets/CHANG_KIHA/ch2.jpg">
+      <img src="assets/CHANG_KIHA/ch3.jpg">
+      </div>
+
+      <br><br><br>
+      <div class="left-info bottom">
+        <h1>Pentaport<br>Music<br>Festival</h1>
+      </div>
+    </div>
+  </section>
+
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.1 // 보이는 비율 10% 이상이면 show 추가
+  });
+
+  document.querySelectorAll('.text-box').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3rd Line Butterfly</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Section 1 : 아티스트 이미지 -->
+  <section class="section" id="section1">
+    <div class="background" style="background-image: url('assets/3rd_Line_Butterfly/12.png');"></div>
+    <div class="overlay"></div>
+    <a href="index.html" class="back">← Back</a>
+    <div class="content">
+      <div class="left-title">
+        <h1>Pentaport<br>Music<br>Festival</h1>
+      </div>
+      <div class="right-info fixed-info">
+        <h2>3rd Line Butterfly</h2>
+        <p>2025.08.03<br>Songdo Moonlight Festival Park</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Section 2 : 텍스트 -->
+  <section class="section" id="section2">
+    <div class="background" style="background-image: url('2.jpg');"></div>
+    <div class="overlay"></div>
+    <div class="content column fade-in">
+      <div class="text-box">
+        <p>
+          한국 밴드의 시대를 대표하는 3호선 버터플라이의 새로운 시작
+
+3호선 버터플라이는 1999년 결성되어 실험적인 노이즈와 사이키델릭하고 감각적인 사운드를특유의 몽환적이고 서정적인 분위기로 채우며 많은 이들에게 깊은 울림을 남겼습니다. 또한, 현실과 감성을 섬세하게 녹여낸 가사로 세대를 초월한 공감을 이끌어냈습니다.
+
+2012년에 발매한 4집 [Dreamtalk]는 다수 매체에서 호평을 받았을 뿐만 아니라, 제10회 한국 대중음악상 주요 부문인 "올해의 음반”을 비롯해 여러 부문에서 3관왕을 달성했습니다.
+
+2018년엔 영국의 The Great Escape와 전세계 3대 페스티벌 중 하나인 Primavera Sound Barcelona에 초청받아 성공적인 유럽 투어를 마친 뒤 6년 간 휴식기를 가졌습니다.
+
+앨범마다 새로운 사운드를 시도하며 자신들만의 음악 세계를 꾸준히 확장해오고 있는 3호선 버터플라이는 2025 인천 펜타포트 락 페스티벌을 시작으로 새 앨범 발매까지 다양한 활동을 준비 중입니다.
+
+펜타포트에서 3호선 버터플라이의 새로운 챕터가 시작되는 순간을 기대해주세요!
+
+        </p>
+        <p class="footer">@3rdlinebutterfly</p>
+      </div>
+   
+    <div class="album">
+      <img src="assets/3rd_Line_Butterfly/31.jpg">
+      <img src="assets/3rd_Line_Butterfly/32.jpg">
+      <img src="assets/3rd_Line_Butterfly/33.jpg">
+      <img src="assets/3rd_Line_Butterfly/34.jpg">
+      <img src="assets/3rd_Line_Butterfly/35.jpg">
+      </div>
+
+      <br><br><br>
+      <div class="left-info bottom">
+        <h1>Pentaport<br>Music<br>Festival</h1>
+      </div>
+    </div>
+  </section>
+
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.1 // 보이는 비율 10% 이상이면 show 추가
+  });
+
+  document.querySelectorAll('.text-box').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+
+</body>
+
+</html>

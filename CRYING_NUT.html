@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRYING NUT</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Section 1 : 아티스트 이미지 -->
+  <section class="section" id="section1">
+    <div class="background" style="background-image: url('assets/CRYING_NUT/4.png');"></div>
+    <div class="overlay"></div>
+    <a href="index.html" class="back">← Back</a>
+    <div class="content">
+      <div class="left-title">
+        <h1>Pentaport<br>Music<br>Festival</h1>
+      </div>
+      <div class="right-info fixed-info">
+        <h2>CRYING NUT</h2>
+        <p>2025.08.01<br>Songdo Moonlight Festival Park</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Section 2 : 텍스트 -->
+  <section class="section" id="section2">
+    <div class="background" style="background-image: url('2.jpg');"></div>
+    <div class="overlay"></div>
+    <div class="content column fade-in">
+      <div class="text-box">
+        <p>
+          30년째 말달리고 있는 펑크 밴드
+
+올해로 데뷔 30주년을 맞이한 크라잉넛은 1993년 고등학교 재학 시절 학교 친구들이 밴드를 결성하여 1995년 홍대 앞 라이브 클럽 ’드럭‘에서 본격적인 활동을 시작한 후, 단 한 번의 멤버 교체 없이 지금까지 달려온 대한민국을 대표하는 밴드 중 한 팀입니다.
+
+1998년 발매한 1집 정규앨범 [CRYING NUT]은 당시 인디 앨범으로 10만 장이 넘는 판매고를 기록하였고 크라잉넛은 각종 매체의 주목을 받으며 인디를 넘어 메인스트림을 아우르는 밴드가 되었습니다.
+
+크라잉넛은 펑크 외에도 레게, 스카, 폴카, 아이리쉬, 헤비메탈, 컨트리 등 온갖 장르를 아우르는 본인들만의 독특한 음악 세계를 구축하며, 한국 음악사에서 최초로 펑크 음악을 대중들에게 알린 밴드라는 의미까지 부여받고 있습니다.
+
+2025 인천 펜타포트 락 페스티벌에서
+데뷔 30주년을 맞이한 크라잉넛의 무대를 즐겨보세요!
+
+        </p>
+        <p class="footer">@crying.nut</p>
+      </div>
+   
+    <div class="album">
+      <img src="assets/CRYING_NUT/cr1.jpg">
+      <img src="assets/CRYING_NUT/cr2.jpg">
+      <img src="assets/CRYING_NUT/cr3.jpg">
+      <img src="assets/CRYING_NUT/cr4.jpg">
+      <img src="assets/CRYING_NUT/cr5.jpg">
+      </div>
+
+      <br><br><br>
+      <div class="left-info bottom">
+        <h1>Pentaport<br>Music<br>Festival</h1>
+      </div>
+    </div>
+  </section>
+
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.1 // 보이는 비율 10% 이상이면 show 추가
+  });
+
+  document.querySelectorAll('.text-box').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+
+</body>
+
+</html>

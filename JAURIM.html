@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JAURIM</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Section 1 : 아티스트 이미지 -->
+  <section class="section" id="section1">
+    <div class="background" style="background-image: url('assets/JAURIM/10.png');"></div>
+    <div class="overlay"></div>
+    <a href="index.html" class="back">← Back</a>
+    <div class="content">
+      <div class="left-title">
+        <h1>Pentaport<br>Music<br>Festival</h1>
+      </div>
+      <div class="right-info fixed-info">
+        <h2>JAURIM</h2>
+        <p>2025.08.03<br>Songdo Moonlight Festival Park</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Section 2 : 텍스트 -->
+  <section class="section" id="section2">
+    <div class="background" style="background-image: url('2.jpg');"></div>
+    <div class="overlay"></div>
+    <div class="content column fade-in">
+      <div class="text-box">
+        <p>
+          자우림의 음악에 빚지지 않은 청춘은 없다
+
+자우림은 1997년에 결성된 록 밴드로, 김윤아, 이선규, 김진만으로 구성되어 있습니다. 지금까지 총 11장의 정규 앨범을 발표했으며, “헤이헤이헤이”를 시작으로 “매직카펫라이드”, “하하하쏭”, “미안해 널 미워해” 등 각 앨범마다 여러 히트곡을 탄생시켰습니다.
+
+특히 2013년 발표한 앨범 [Goodbye, grief.]에 수록된 “스물다섯, 스물하나”는 자우림의 상징적인 대표곡으로 꼽힙니다. 이 곡은 2022년 방영된 드라마에 영감을 주며, 자우림의 음악은 동시대의 청춘과 호흡하며 사랑받는다는 점을 여실히 보여줬습니다.
+
+국내 주요 페스티벌의 헤드라이너이자, 2022년 대한민국 대중문화예술상 국무총리 표창 MAMA 인스파이어링 어치브먼트 등 을 수상하며 살아 있는 전설로 활동 중인 자우림을 2025 인천 펜타포트 락 페스티벌에서 만나보세요!
+
+        </p>
+        <p class="footer">@jaurim_official</p>
+      </div>
+   
+    <div class="album">
+      <img src="assets/JAURIM/j1.jpg">
+      <img src="assets/JAURIM/j2.jpg">
+      <img src="assets/JAURIM/j3.jpg">
+      <img src="assets/JAURIM/j4.jpg">
+      <img src="assets/JAURIM/j5.jpg">
+      </div>
+
+      <br><br><br>
+      <div class="left-info bottom">
+        <h1>Pentaport<br>Music<br>Festival</h1>
+      </div>
+    </div>
+  </section>
+
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.1 // 보이는 비율 10% 이상이면 show 추가
+  });
+
+  document.querySelectorAll('.text-box').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+
+</body>
+
+</html>
